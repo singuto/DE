@@ -1,0 +1,52 @@
+#DE_decisions.1 = {
+
+    #test decision
+	#The requirements/to which countries the decision is shown
+#	is_shown = {
+		#An auxiliary variable is usually used to make sure the decision is not repeated more than once
+#		is_player = yes
+#	}
+
+#	possible = {
+#		is_player = yes
+#		total_population >= 500000
+#		NOT = { has_variable = DE_decisions.1_taken }
+#	}
+	
+	#The effects that are executed once the decision is taken
+#	when_taken = {
+#		activate_law = law_type:law_colonial_exploitation
+#		set_variable = {
+#			name = DE_decisions.1_taken
+#		} 	
+#	}
+#}
+
+DE_decisions.2 = {
+
+	#The requirements/to which countries the decision is shown
+	is_shown = {
+		#An auxiliary variable is usually used to make sure the decision is not repeated more than once
+		is_player = no
+		total_population >= 500000
+		NOT = { has_variable = DE_decisions.2_taken }
+	}
+
+	possible = {
+		is_player = no
+		total_population >= 500000
+		NOT = { has_variable = DE_decisions.2_taken }
+	}
+	
+	#The effects that are executed once the decision is taken
+	when_taken = {
+		activate_law = law_type:law_colonial_exploitation
+		set_variable = {
+			name = DE_decisions.2_taken
+		} 	
+	}
+
+	ai_chance = {
+		base = 100
+	}
+}
